@@ -2,7 +2,8 @@
 //  For this example, imagine you haven an API to load details for a given record based on its `id`
 //  You have a bunch of records (i.e. some record IDs) that you want to update, so you have to
 //  request the details for each record from the API and the update them locally in your database
-
+//
+//  https://innovaptor.com/blog/2018/02/12/rac-wait-for-multiple-signals/
 import Foundation
 import ReactiveSwift
 import ReactiveCocoa

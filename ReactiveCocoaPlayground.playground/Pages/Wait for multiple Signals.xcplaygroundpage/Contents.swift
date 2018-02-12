@@ -11,12 +11,9 @@ let (signalB, observerB) = Signal<Int, NoError>.pipe()
 let producerA = SignalProducer(value: 1)
 let producerB = SignalProducer(value: 2)
 
-let both = SignalProducer([producerA, producerB]).flatten(.concat)
-//let both = SignalProducer([signalA, signalB]).flatten(.concat)
-//let both = Signal.merge([signalA, signalB])
+let both = Signal.merge([signalA, signalB])
 
-//both.observeCompleted {
-both.startWithCompleted {
+both.observeCompleted {
   print("Both have completed")
 }
 
